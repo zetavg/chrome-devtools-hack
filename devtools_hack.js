@@ -94,5 +94,5 @@ if (location.protocol === 'chrome-devtools:') {
 		/* Toggle the Drawer twice to avoid incorrect element position */
 		document.getElementsByClassName('console-status-bar-item')[0].click();
 		document.getElementsByClassName('console-status-bar-item')[0].click();
-	}, 1500);
+	}, 2400);
 }
