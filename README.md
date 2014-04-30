@@ -9,7 +9,7 @@ Some hacks for Google Chrome DevTools.
 
 > 打開 Chrome 的擴充功能設定，開啓開發人員模式，載入未封裝擴充功能。
 
-1. Download the code, e.g. `git clone git://github.com/Asana/Chrome-Extension-Example.git`
+1. Download the code, e.g. `git clone https://github.com/Neson/chrome-devtools-hack`
 2. Navigate to `chrome://extensions` in Chrome
 3. Check the `Developer mode` check box located on the top-right corner
 4. Click the `Load Unpacked Extension...` button
