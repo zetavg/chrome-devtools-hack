@@ -2,6 +2,8 @@ if (location.protocol === 'chrome-devtools:') {
 
 	setTimeout(function () {
 
+    console.log('hello?');
+
 		var __hack_createHTML = function (htmlStr) {
 			var frag = document.createDocumentFragment(),
 				temp = document.createElement('div');
@@ -41,13 +43,13 @@ if (location.protocol === 'chrome-devtools:') {
 
 		/* CSS Quick-searching */
 		var searchBox = __hack_createHTML('<style> input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: rgba(128,128,128, .5); } .css-search-box:focus { border: 1px solid rgba(128,128,128, .5); } .styles-element-state-pane { padding-top: 20px !important; height: 56px !important; }</style><input class="css-search-box monospace" type="text" placeholder="Find" style="float: right; background-color: transparent; outline: none !important; border: 1px solid rgba(128,128,128, .32); background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAGFBMVEUAAACRlZyRlZySlZuRlZuRlJyQlZ2SlZwapm9KAAAAB3RSTlMAjd6rQGAZKun8xQAAAKdJREFUeNqdk0EOxDAIAwED+f+P9xBaBEGKtr4RD2CJlkJuEFkCVhrFsh6JnbaGHcLhryapvqczEzGf1ckNUVCKd49HaZvwBPpMbUEtG8rLWyJW9lDaq56KC+AFsAJkxBoT1wm3DFYqFGCVHo0yhRZLGmF5jHzInc7nOREnZlPbdvK55BBTyq8E4UroiwgrJoLcGIjfYiamlfhI/LeFLsQEjB/CTIiAfogFCkGFlhykAAAAAElFTkSuQmCC); background-repeat: no-repeat; background-size: auto 80%; background-position: 3px 2px; padding-left: 18px !important; width: 40%;">');
-		document.getElementById('inspector-split-view').getElementsByClassName('sidebar-pane-toolbar')[0].insertBefore(searchBox, document.getElementById('inspector-split-view').getElementsByClassName('sidebar-pane-toolbar')[0].childNodes[99]);
+		document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('sidebar-pane-toolbar')[0].insertBefore(searchBox, document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('sidebar-pane-toolbar')[0].childNodes[99]);
 
 		var __hack_cssSearch = function () {
-			var s = document.getElementById('inspector-split-view').getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].value;
+			var s = document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].value;
 			var styleType = ['navigable', 'read-only'];
 			for (t=0; t<styleType.length; t++) {
-				var styles = document.getElementById('inspector-split-view').getElementsByClassName('styles-pane')[0].getElementsByClassName(styleType[t]);
+				var styles = document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('styles-pane')[0].getElementsByClassName(styleType[t]);
 
 				if (s !== '') {
 					for (i=0; i<styles.length; i++) {
@@ -86,13 +88,15 @@ if (location.protocol === 'chrome-devtools:') {
 			}
 		};
 
-		document.getElementById('inspector-split-view').getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].addEventListener('change', __hack_cssSearch, false);
-		document.getElementById('inspector-split-view').getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].addEventListener('keyup', __hack_cssSearch, false);
-		document.getElementById('inspector-split-view').getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].addEventListener('paste', __hack_cssSearch, false);
+		document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].addEventListener('change', __hack_cssSearch, false);
+		document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].addEventListener('keyup', __hack_cssSearch, false);
+		document.getElementsByClassName('split-view-contents')[0].getElementsByClassName('sidebar-pane-toolbar')[0].getElementsByClassName('css-search-box')[0].addEventListener('paste', __hack_cssSearch, false);
 
 
 		/* Toggle the Drawer twice to avoid incorrect element position */
 		document.getElementsByClassName('console-status-bar-item')[0].click();
 		document.getElementsByClassName('console-status-bar-item')[0].click();
+
+    console.log('hello.');
 	}, 2400);
 }
