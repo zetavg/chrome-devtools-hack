@@ -37,6 +37,10 @@ if (location.protocol === 'chrome-devtools:') {
 							document.getElementsByClassName('toggled-undocked')[0].click();
 					}
 					break;
+
+        case 67:
+          document.getElementsByClassName('node-search-status-bar-item')[0].click();
+          break;
 			}
 		};
 

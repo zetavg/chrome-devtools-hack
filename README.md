@@ -28,4 +28,5 @@ Fuzzy search of css matching rules listed in styles panel.
 
 |                                | Windows / Linux | Mac    |
 | ------------------------------ | --------------- | ------ |
+| Select node to inspect         | `Ctrl+Alt+C`    | `⌥⌘C`  |
 | Toggle inspector position      | `Ctrl+Alt+L`    | `⌥⌘L`  |
