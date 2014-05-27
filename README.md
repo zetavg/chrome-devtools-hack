@@ -14,7 +14,7 @@ Some hacks for Google Chrome DevTools.
 3. Check the `Developer mode` check box located on the top-right corner
 4. Click the `Load Unpacked Extension...` button
 5. Chose the folder of downloaded code
-6. Open the devtools on any page to check if it's woeking
+6. Open the devtools on any page to check if it's working
 
 ## Hacks
 
